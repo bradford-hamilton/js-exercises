@@ -1,6 +1,7 @@
 // reverse a string
 
 /* ************************************************************* */
+
 function reverseString(string) {
   return string.split('').reverse().join('');
 }
@@ -8,6 +9,7 @@ function reverseString(string) {
 reverseString("bradford");
 
 /* ************************************************************* */
+
 function strReverse(string) {
 	newArr = [];
 	arr = string.split('');
@@ -18,3 +20,15 @@ function strReverse(string) {
 }
 
 strReverse("bradford");
+
+/* ************************************************************* */
+
+//using recursion
+function stringReversal(str) {
+  if(str.length <= 1) {
+    return str;
+  }
+  return stringReversal( str.substring(1) ) + str.charAt(0);
+}
+
+stringReversal("bradford");
