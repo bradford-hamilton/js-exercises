@@ -32,8 +32,6 @@ console.log(palindrome("A but tuba"));
 console.log(palindrome("Not a palindrome"));
 
 
-
-
 /* ========================================================================== */
 
 const checkPalindrome = (input) =>
