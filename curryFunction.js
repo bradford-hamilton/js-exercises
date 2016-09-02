@@ -14,3 +14,16 @@ function add(num1) {
     return num1 + num2;
   };
 }
+
+/* ******************************************************** */
+
+// function that can add 2 arguments either (x, y) OR (x)(y)
+function add() {
+  if ( arguments.length === 2 ) {
+    return arguments[0] + arguments[1];
+  } else {
+    return function(y) {
+      return x + y;
+    };
+  }
+}
