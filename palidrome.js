@@ -1,7 +1,6 @@
 //input is a string
 //output is true or false if palidrome
 
-
 /* ========================================================================== */
 
 function palindrome(phrase) {
@@ -49,3 +48,19 @@ console.log(checkPalindrome('I, man, am regal - a German am I'))
 console.log(checkPalindrome('No lemons, no melon'))
 console.log(checkPalindrome('Was it a car or a cat I saw?'))
 console.log(checkPalindrome('Probably not a palindrome'))
+
+/* ========================================================================== */
+
+function isPalindrome(string) {
+  string = string.replace(/\s/g, '').toLowerCase();
+
+  return string.length <= 1 ||
+    string[0] === string[string.length - 1] &&
+      isPalindrome(string.substr(1, string.length - 2));
+}
+
+['race car', 'LeVEl', 'd bdfG GF d bd', 'not A PalinDrome', 'something else',
+  'ab c1 cba', 'abc1c b1a'].forEach(function(string) {
+    console.log(isPalindrome(string));
+  }
+);
